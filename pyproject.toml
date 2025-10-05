@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nasa-port"
+version = "0.1.0"
+description = "Python SDK for NASA Exoplanet Archive TAP service"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "dlt>=1.17.1",
+    "duckdb>=1.4.0",
+    "requests>=2.32.5",
+    "ruff>=0.13.3",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nasa_port"]
